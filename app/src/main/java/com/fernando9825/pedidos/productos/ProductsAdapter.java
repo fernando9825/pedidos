@@ -45,7 +45,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         if (TextUtils.isEmpty(string_imagen)) {
             string_imagen = "img/productos/nodisponible.jpg";
         }
-        String txt_precio = "$ " + String.valueOf(product.getPrecio());
+        String txt_precio = "$ " + product.getPrecio();
         String ruta_imagen = Product.URL_PRODUCT + string_imagen;
         Glide.with(mCtx)
                 .load(ruta_imagen)
@@ -53,7 +53,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
         holder.textViewTitle.setText(product.getDescripcion());
         holder.textViewShortDesc.setText(product.getBarcode());
-        holder.textViewRating.setText(String.valueOf(product.getCosto()));
+        //holder.textViewRating.setText(String.valueOf(product.getCosto()));
         holder.textViewPrice.setText(txt_precio);
     }
 
@@ -72,7 +72,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
-            textViewRating = itemView.findViewById(R.id.textViewRating);
+            //textViewRating = itemView.findViewById(R.id.textViewRating);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             imageView = itemView.findViewById(R.id.imageView);
         }
