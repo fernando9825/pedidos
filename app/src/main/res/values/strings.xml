@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pedidos</string>
+    <string name="tab_text_1">Productos</string>
+    <string name="tab_text_2">Clientes</string>
+    <string name="tab_text_3">Pedidos</string>
+
+    <!--app strings-->
+    <string name="refresh">Refrescando</string>
+</resources>
