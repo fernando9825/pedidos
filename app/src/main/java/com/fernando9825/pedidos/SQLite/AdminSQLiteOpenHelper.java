@@ -28,6 +28,11 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     public List<Product> baseDatosLocal() {
         SQLiteDatabase bd = this.getWritableDatabase();
         Cursor filas = bd.rawQuery("select * from productos", null);
+
+        if (filas.getCount() == 0) {
+            return null;
+        }
+
         List<Product> productList = new ArrayList<>();
 
         while (filas.moveToNext()) {

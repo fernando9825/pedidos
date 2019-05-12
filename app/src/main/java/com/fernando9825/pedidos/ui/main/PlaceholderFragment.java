@@ -19,6 +19,7 @@ import com.fernando9825.pedidos.R;
 import com.fernando9825.pedidos.productos.Product;
 import com.fernando9825.pedidos.productos.ProductsAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //import com.fernando9825.pedidos.productos.*;
@@ -36,8 +37,10 @@ public class PlaceholderFragment extends Fragment {
     TextView textView;
     RecyclerView recyclerView;
     SwipeRefreshLayout swipeRefreshLayout;
-    List<Product> productsFragment;
-
+    private List<Product> products = new ArrayList<>();
+    private final int PEDIDOS = 0,
+            PRODUCTOS = 1,
+            CLIENTES = 2;
 
 
     public static PlaceholderFragment newInstance(int index) {
@@ -58,6 +61,7 @@ public class PlaceholderFragment extends Fragment {
         }
         pageViewModel.setIndex(index);
 
+
     }
 
 
@@ -68,17 +72,42 @@ public class PlaceholderFragment extends Fragment {
             Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         //textView = root.findViewById(R.id.section_label);
+        products = MainActivity.products;
+
+        // setting up binds
         recyclerView = root.findViewById(R.id.recyclerView);
+        swipeRefreshLayout = root.findViewById(R.id.swipeRefreshLayout);
+
+
+        // set initial recycler view properties
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        productsFragment = MainActivity.products;
-        ProductsAdapter adapter = new ProductsAdapter(getContext(), productsFragment);
-        recyclerView.setAdapter(adapter);
-        //swipeRefreshLayout = root.findViewById(R.id.swipeRefreshLayout);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // here we have to get data on app start load all products to local DB
+                /*if(localDataBaseIsEmpty()) {
+                    ProductManager productManager = new ProductManager(getContext());
+                    productManager.loadProductsToLocalDB();
+                    products = productManager.productList;
+                }
 
 
+                // getting adapter for the recycler view
+                ProductsAdapter adapter2 = new ProductsAdapter(getContext(), products);
+                recyclerView.setAdapter(adapter2);
+                swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
+                */
 
 
+            }
+
+
+        });
+
+
+        // when changing tab this event is invoked
         pageViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable final String s) {
@@ -89,11 +118,41 @@ public class PlaceholderFragment extends Fragment {
 
                 //swipeRefreshLayout.setRefreshing(false);
 
+                // by default setting an adapter to the recycler view
+                List<Product> noProduct = new ArrayList<>();
+                noProduct.add(new Product(null));
+                switch (fragmentNumberGlobal) {
+                    case PEDIDOS:
+                        noProduct.remove(0);
+                        noProduct.add(new Product("Aún sin pedidos, presione el botón para crear uno nuevo"));
+                        recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                        break;
+
+                    case PRODUCTOS:
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                        loadProductsToRecycler();
+
+                        break;
+
+                    case CLIENTES:
+                        noProduct.remove(0);
+                        noProduct.add(new Product("Aún sin clientes, deslice hacia abajo para refrescar"));
+                        recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                        break;
+                }
             }
         });
 
         return root;
     }
+
+    private void loadProductsToRecycler() {
+        // getting adapter for the recycler view
+        ProductsAdapter adapter2 = new ProductsAdapter(getContext(), products);
+        recyclerView.setAdapter(adapter2);
+        swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
+    }
+
 
 
 }

@@ -45,7 +45,14 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         if (TextUtils.isEmpty(string_imagen)) {
             string_imagen = "img/productos/nodisponible.jpg";
         }
-        String txt_precio = "$ " + product.getPrecio();
+
+        String txt_precio;
+        if (product.getPrecio() == 0)
+            txt_precio = "";
+        else
+            txt_precio = "$ " + product.getPrecio();
+
+
         String ruta_imagen = Product.URL_PRODUCT + string_imagen;
         Glide.with(mCtx)
                 .load(ruta_imagen)

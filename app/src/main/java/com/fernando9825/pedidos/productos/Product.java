@@ -22,6 +22,10 @@ public class Product {
         this.image = image;
     }
 
+    public Product(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public int getId() {
         return id;
     }
