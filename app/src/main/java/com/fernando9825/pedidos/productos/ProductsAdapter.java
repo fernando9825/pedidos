@@ -60,7 +60,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
         holder.textViewTitle.setText(product.getDescripcion());
         holder.textViewShortDesc.setText(product.getBarcode());
-        //holder.textViewRating.setText(String.valueOf(product.getCosto()));
         holder.textViewPrice.setText(txt_precio);
     }
 
@@ -71,7 +70,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewTitle, textViewShortDesc, textViewRating, textViewPrice;
+        TextView textViewTitle, textViewShortDesc, textViewPrice;
         ImageView imageView;
 
         public ProductViewHolder(View itemView) {
@@ -79,7 +78,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewShortDesc = itemView.findViewById(R.id.textViewShortDesc);
-            //textViewRating = itemView.findViewById(R.id.textViewRating);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             imageView = itemView.findViewById(R.id.imageView);
         }

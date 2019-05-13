@@ -5,7 +5,7 @@ package com.fernando9825.pedidos.productos;
  */
 
 public class Product {
-    public static String URL_PRODUCT = "http://ppdm.herokuapp.com/producto";
+    public static String URL_PRODUCT = "http://ppdm.herokuapp.com/productos";
     private int id;
     private String descripcion;
     private String barcode;
@@ -13,11 +13,10 @@ public class Product {
     private double precio;
     private String image;
 
-    public Product(int id, String descripcion, String barcode, double costo, double precio, String image) {
+    public Product(int id, String descripcion, String barcode, double precio, String image) {
         this.id = id;
         this.descripcion = descripcion;
         this.barcode = barcode;
-        this.costo = costo;
         this.precio = precio;
         this.image = image;
     }
@@ -38,9 +37,6 @@ public class Product {
         return barcode;
     }
 
-    public double getCosto() {
-        return costo;
-    }
 
     public double getPrecio() {
         return precio;

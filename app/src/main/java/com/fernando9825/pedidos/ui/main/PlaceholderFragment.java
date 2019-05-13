@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.fernando9825.pedidos.MainActivity;
 import com.fernando9825.pedidos.R;
+import com.fernando9825.pedidos.clientes.Client;
+import com.fernando9825.pedidos.clientes.ClientsAdapter;
 import com.fernando9825.pedidos.productos.Product;
 import com.fernando9825.pedidos.productos.ProductsAdapter;
 
@@ -37,7 +39,8 @@ public class PlaceholderFragment extends Fragment {
     TextView textView;
     RecyclerView recyclerView;
     SwipeRefreshLayout swipeRefreshLayout;
-    private List<Product> products = new ArrayList<>();
+    private List<Product> products;
+    private List<Client> clients;
     private final int PEDIDOS = 0,
             PRODUCTOS = 1,
             CLIENTES = 2;
@@ -72,7 +75,7 @@ public class PlaceholderFragment extends Fragment {
             Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_main, container, false);
         //textView = root.findViewById(R.id.section_label);
-        products = MainActivity.products;
+
 
         // setting up binds
         recyclerView = root.findViewById(R.id.recyclerView);
@@ -107,12 +110,17 @@ public class PlaceholderFragment extends Fragment {
         });
 
 
+        products = MainActivity.products;
+        clients = MainActivity.clients;
+
+
         // when changing tab this event is invoked
         pageViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable final String s) {
                 // Here we'll put a adapter to recyclerView, depending on the index
-
+                products = MainActivity.products;
+                clients = MainActivity.clients;
                 fragmentNumberGlobal = Integer.parseInt(s.split(":")[1]) - 1;
                 //textView.setText(MainActivity.products.get(0).getDescripcion());
 
@@ -129,15 +137,31 @@ public class PlaceholderFragment extends Fragment {
                         break;
 
                     case PRODUCTOS:
-                        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-                        loadProductsToRecycler();
+
+                        if (products != null) {
+                            loadProductsToRecycler();
+
+                        } else {
+                            noProduct.remove(0);
+                            noProduct.add(new Product("Aún sin productos, deslice hace abajo para refrescar"));
+                            recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+
+                        }
+
 
                         break;
 
                     case CLIENTES:
-                        noProduct.remove(0);
-                        noProduct.add(new Product("Aún sin clientes, deslice hacia abajo para refrescar"));
-                        recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+
+                        if (clients != null) {
+                            loadClientsToRecycler();
+                        } else {
+
+                            noProduct.remove(0);
+                            noProduct.add(new Product("Aún sin clientes, deslice hace abajo para refrescar"));
+                            recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                        }
+
                         break;
                 }
             }
@@ -148,7 +172,18 @@ public class PlaceholderFragment extends Fragment {
 
     private void loadProductsToRecycler() {
         // getting adapter for the recycler view
+        swipeRefreshLayout.setRefreshing(false);
+        swipeRefreshLayout.setEnabled(false);
         ProductsAdapter adapter2 = new ProductsAdapter(getContext(), products);
+        recyclerView.setAdapter(adapter2);
+        swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
+    }
+
+    private void loadClientsToRecycler() {
+        // getting adapter for the recycler view
+        swipeRefreshLayout.setRefreshing(false);
+        swipeRefreshLayout.setEnabled(false);
+        ClientsAdapter adapter2 = new ClientsAdapter(getContext(), clients);
         recyclerView.setAdapter(adapter2);
         swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
     }
