@@ -2,7 +2,7 @@ package com.fernando9825.pedidos.pedidos;
 
 public class Pedidos {
 
-    private Integer id;
+    private int id;
     private String producto;
     private String cliente;
     private String cantidad;

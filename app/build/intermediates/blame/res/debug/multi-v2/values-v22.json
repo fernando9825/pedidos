@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Fernando\\AndroidStudioProjects\\Pedidos\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "/home/sonivox/AndroidStudioProjects/pedidos/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Fernando\\.gradle\\caches\\transforms-2\\files-2.1\\2ff2dd75b0c2142a3bf1350314f287f6\\res\\values-v22\\values-v22.xml",
+                    "source": "/home/sonivox/.gradle/caches/transforms-2/files-2.1/7ac3b7b7f5fd9bc873762a610e4e174d/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

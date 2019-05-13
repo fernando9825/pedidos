@@ -1,5 +1,8 @@
 package com.fernando9825.pedidos;
 
+import android.content.ContentProvider;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -30,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
     public ProductManager productManager;
     public static List<Product> products;
     public static List<Client> clients;
-    //public static List<Pedidos> pedidos;
+    public static List<Pedidos> pedidos;
+    Context context;
 
 
     @Override
@@ -68,8 +72,11 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        //.setAction("Action", null).show();
+
+                Intent intent = new Intent (view.getContext(), PedidoActivity.class);
+                startActivityForResult(intent, 0);
 
             }
         });
@@ -79,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             products = getLocalProductList();
             clients = getLocalClientList();
-            //pedidos = getLocalPedidosList();
+            pedidos = getLocalPedidosList();
 
         }
 
@@ -91,11 +98,10 @@ public class MainActivity extends AppCompatActivity {
         return getLocalProductList() == null && getLocalClientList() == null;
     }
 
-    /*private List<Pedidos> getLocalPedidosList(){
+    private List<Pedidos> getLocalPedidosList(){
         List<Pedidos> pedidos = new ArrayList<>();
 
         try {
-
             SQLitePedidos sqLitePedidos = new SQLitePedidos(this,
                     SQLitePedidos.PEDIDOS, null, 1);
             pedidos = sqLitePedidos.getLocalPedidos();
@@ -103,11 +109,10 @@ public class MainActivity extends AppCompatActivity {
         } catch (JsonIOException e) {
             e.printStackTrace();
             Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-
         }
 
         return pedidos;
-    }*/
+    }
 
     private List<Product> getLocalProductList() {
 
@@ -158,8 +163,8 @@ public class MainActivity extends AppCompatActivity {
         ClientManager clientManager = new ClientManager(this);
         clientManager.loadClientsToLocalDB();
 
-        //PedidosManager pedidosManager = new PedidosManager(this);
-        //pedidosManager.loadPedidos();
+        PedidosManager pedidosManager = new PedidosManager(this);
+        pedidosManager.loadPedidos();
 
     }
 }

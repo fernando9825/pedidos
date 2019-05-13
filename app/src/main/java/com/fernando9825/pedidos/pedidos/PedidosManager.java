@@ -17,7 +17,6 @@ public class PedidosManager extends AppCompatActivity {
 
     public void loadPedidos(){
 
-
     }
 
 }

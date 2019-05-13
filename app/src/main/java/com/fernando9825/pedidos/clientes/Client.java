@@ -15,6 +15,10 @@ public class Client {
         this.telefono = telefono;
     }
 
+    public Client() {
+
+    }
+
 
     public Integer getId() {
         return id;
