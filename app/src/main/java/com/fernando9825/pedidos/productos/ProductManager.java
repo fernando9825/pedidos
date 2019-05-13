@@ -13,6 +13,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.fernando9825.pedidos.SQLite.SQLiteProducts;
 import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -80,6 +81,12 @@ public class ProductManager extends AppCompatActivity {
                             //recyclerView.setAdapter(adapter);
 
                             Toast.makeText(context, "Se han descargado los datos del servidor", Toast.LENGTH_LONG).show();
+                            /*if (!MainActivity.productsDownloaded && !MainActivity.clientsDownloaded) {
+                                MainActivity.settings.edit().putBoolean(MainActivity.products_key, true).commit();
+                                Intent nextIntent = new Intent(context, MainActivity.class);
+                                nextIntent.putExtra(EXTRA_TEXT, "Hello!");
+                                ProcessPhoenix.triggerRebirth(context, nextIntent);
+                            }*/
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -97,52 +104,25 @@ public class ProductManager extends AppCompatActivity {
         Volley.newRequestQueue(context).add(stringRequest);
 
 
-        /*RequestTickle mRequestTickle = VolleyTickle.newRequestTickle(getApplicationContext());
+    }
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Product.URL_PRODUCT,
-                null, null);
-        mRequestTickle.add(stringRequest);
-        NetworkResponse response = mRequestTickle.start();
+    private List<Product> getLocalProductList() {
 
-        if (response.statusCode == 200) {
-            String data = VolleyTickle.parseResponse(response);
+        List<Product> product = new ArrayList<>();
 
+        try {
 
-            productList = new ArrayList<>();
-            List<Product> products;
-            Gson gson = new Gson();
+            SQLiteProducts sqLiteProducts = new SQLiteProducts(context,
+                    SQLiteProducts.PRODUCTS, null, 1);
+            product = sqLiteProducts.getLocalProducts();
 
-            products = Arrays.asList(gson.fromJson(data, Product[].class));
-            productList = products;
+        } catch (JsonIOException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
-            SQLiteProducts sqLiteProducts = new SQLiteProducts(context, SQLiteProducts.PRODUCTS, null, 1);
-            //establece el metod para hacer que podamos escribir sobre la bd creada
-            SQLiteDatabase bd = sqLiteProducts.getWritableDatabase();
+        }
 
-            ContentValues registro = new ContentValues();
-
-            for (int i = 0; i < products.size(); i++) {
-                registro.put("descripcion", products.get(i).getDescripcion());
-                registro.put("barcode", products.get(i).getBarcode());
-                registro.put("precio", products.get(i).getPrecio());
-                registro.put("image", products.get(i).getImage());
-                bd.insert(SQLiteProducts.PRODUCTS, null, registro);
-
-                registro.clear();
-            }
-
-            bd.close();
-
-            //crear el  adaptador y asignarlo al  recyclerview
-            //ProductsAdapter adapter = new ProductsAdapter(MainActivity.this, SQLiteClients.getLocalProducts());
-            //recyclerView.setAdapter(adapter);
-
-            Toast.makeText(context, "Se han descargado los datos del servidor", Toast.LENGTH_LONG).show();
-
-        } else {
-            productList = null;
-        }*/
-
+        return product;
 
     }
 

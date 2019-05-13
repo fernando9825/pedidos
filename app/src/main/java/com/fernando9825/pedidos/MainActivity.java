@@ -1,8 +1,12 @@
 package com.fernando9825.pedidos;
 
+<<<<<<< HEAD
 import android.content.ContentProvider;
 import android.content.Context;
 import android.content.Intent;
+=======
+import android.content.SharedPreferences;
+>>>>>>> master
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -33,32 +37,38 @@ public class MainActivity extends AppCompatActivity {
     public ProductManager productManager;
     public static List<Product> products;
     public static List<Client> clients;
+<<<<<<< HEAD
     public static List<Pedidos> pedidos;
     Context context;
 
+=======
+    public static final String IP_SERVER = "https://ppdm.herokuapp.com";
+    public static boolean firstTime = true;
+    public static boolean productsDownloaded = false;
+    public static boolean clientsDownloaded = false;
+    public static final String products_key = "products_downloaded";
+    public static final String clients_key = "clients_downloaded";
+    public static SharedPreferences settings;
+>>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
-        /*final String PREFS_NAME = "MyPrefsFile";
+        final String PREFS_NAME = "MyPrefsFile";
 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        settings = getSharedPreferences(PREFS_NAME, 0);
 
-        if (settings.getBoolean("my_first_time", true)) {
-            //the app is being launched for first time, do something
-            Log.d("Comments", "First time");
+        if (settings.getBoolean(products_key, false)) {
+            productsDownloaded = true;
+        }
 
-            // first time task
-            getDataFromServer();
-            Toast.makeText(this, "La aplicacion necesita descargar los datos por primera vez",
-                    Toast.LENGTH_LONG).show();
-            // record the fact that the app has been started at least once
-            settings.edit().putBoolean("my_first_time", false).commit();
-        } else {
+        if (settings.getBoolean(clients_key, false)) {
+            clientsDownloaded = true;
+        }
 
-        }*/
+
 
 
         setContentView(R.layout.activity_main);
@@ -86,8 +96,23 @@ public class MainActivity extends AppCompatActivity {
         } else {
             products = getLocalProductList();
             clients = getLocalClientList();
+<<<<<<< HEAD
             pedidos = getLocalPedidosList();
 
+=======
+
+            if (products == null) {
+                ProductManager productManager = new ProductManager(this);
+                productManager.loadProductsToLocalDB();
+
+            }
+
+            if (clients == null) {
+                ClientManager clientManager = new ClientManager(this);
+                clientManager.loadClientsToLocalDB();
+
+            }
+>>>>>>> master
         }
 
     }
@@ -156,6 +181,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDataFromServer() {
         // fetch products and clients data from server
+        Toast.makeText(this, "Intentando obtener información desde: " + IP_SERVER,
+                Toast.LENGTH_LONG).show();
         ProductManager productManager = new ProductManager(this);
         productManager.loadProductsToLocalDB();
 
@@ -163,8 +190,15 @@ public class MainActivity extends AppCompatActivity {
         ClientManager clientManager = new ClientManager(this);
         clientManager.loadClientsToLocalDB();
 
+<<<<<<< HEAD
         PedidosManager pedidosManager = new PedidosManager(this);
         pedidosManager.loadPedidos();
+=======
+
+    }
+
+
+>>>>>>> master
 
     }
 }
