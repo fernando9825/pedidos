@@ -1,187 +1,219 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\126555833666fe781a68a59a2f7604c0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\2ff2dd75b0c2142a3bf1350314f287f6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d412b9f3d54783fdf564413fadfc71c7\AndroidManifest.xml:2:1-11:12
-MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:17:1-30:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d13580c86b98dd3274f8217f02dafd39\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\a6afc345f9f6dc747c2b58b677ef55f8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\87f7cfa666ebfa5589ce8212d93c6a39\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\0c9a8a93d08a67c82dfc276ddc2f3640\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\336d3af706382b4c307582119a8f45c9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\448f8a7969deec90f5cfbe5cbb028119\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\40502b61652b449bfa3eea878b73264d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\407507bd1e88687d6980de012edda134\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\7b3bb9fc8b0640a5a679ac02b00bad64\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\8676bd550ca4021e6a88b9c7d61b86dc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\ac9f15ef3b8080575514b0dcf209306c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\9d846c21b14ece4243d2ea8ee2c92484\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d789ceb58d2599a7a3b469d898f621b5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\5cdd31fadf3506aee8af67a2fbd72e1f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4bf5cca504113b19c703073073e5d6f2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d2091294373fb7bb18b2f36253b34cab\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e49f78dc02fe0aac904c512214ca4db0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\b400e55853e241e307e4981d62476966\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\a80dac793f07d6093ea6933562204244\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e2c77a83b28714a9ffc4bf51281781ae\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\ab307a9f393179db4fad8e1439c722f0\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\8339d2e3280a06f39976ecda0ffe989f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\84be7478c062c3f4bcddb1747ddc752d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4c031a9813000b30518119e08b7a8423\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\29efdd4cd5e750246a023d054ad9b17e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\9a5eb2a9f93e9a48540cf6f7f9ff67da\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\2891b33bcbeaef48a079d15ac44ef8fb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4c36f8382d70a720ad639ef94964f0cb\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0182f5b8da2ae7833a7794829b55ffa2/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7ac3b7b7f5fd9bc873762a610e4e174d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/sonivox/.gradle/caches/transforms-2/files-2.1/cc5e187227a54426322f207f1b645eda/AndroidManifest.xml:2:1-11:12
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:17:1-30:12
+MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7bbfe67cf11df65bf381dd1e3eca7eef/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.volley:volley:1.1.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/444150996eed26323bdd8ddb7df7313c/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f7507a1b194f580d5dca957addaaf11f/AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/9e24e000b24f6ad251dbae0429bf134e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/1efbccfe13ec58c4f65aeb506cc3b32e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/b47bae4f8ae234706b0376c366c2437f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/88c37f8685c85f301c2747fc57f71217/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e446e25edf6f167a881a266a26cbe82a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/291c789f69a62b1c16f21047e3d2cded/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7d27a7c02b00b3a5724a233427f57520/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/5a079490306c408171274523107b5ae2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a8757cc671df0b26101dd5a6943c2ed3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/2d81ef0024a40a45af262f0f53d16873/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/58735874520f2c58a08197f0165d74b4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/9cca2146c6af65e6844971ccad41fc9b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a779d2f2c961073eb83e111c427b4333/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/85d55aa507697f744678b5a3bfce10f3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/d70b2c44e5ccbfc590155d9d1e157868/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e4e858f396650aac3161783e9e82f769/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f4af754958aa1e1c90f329500a490d86/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/b0572d79c64d9d848db9a0b013405b13/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0a3f65436c9daa482dc7f7370ec5de69/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f72018ce968fcc28b40888e7ee4bf811/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/638cdeee7377ff241a5765752e21096f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/958cc1d138dfa4ca14fdeb75f28ab081/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/3dd6d2b779dcf90735ffda32f6f95dd9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a4ca0c59ad863def391fb7e907b71345/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/44d4b89c6a46430f18130ddb79a48ac0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/c9c75952bdb4d3d61e4f18f388d007a3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/994a60a324f5f1a1b39694342dbeda01/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7a801030c9043c55ef2ddae6c19aaa8d/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:3:5-39
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:1-24:12
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:1-30:12
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:5:5-22:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\126555833666fe781a68a59a2f7604c0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\126555833666fe781a68a59a2f7604c0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d412b9f3d54783fdf564413fadfc71c7\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d412b9f3d54783fdf564413fadfc71c7\AndroidManifest.xml:9:5-20
-MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:22:5-28:19
-MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:22:5-28:19
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d2091294373fb7bb18b2f36253b34cab\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d2091294373fb7bb18b2f36253b34cab\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e49f78dc02fe0aac904c512214ca4db0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e49f78dc02fe0aac904c512214ca4db0\AndroidManifest.xml:22:5-23:19
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:7:5-28:19
+MERGED from [com.android.support:design:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0182f5b8da2ae7833a7794829b55ffa2/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0182f5b8da2ae7833a7794829b55ffa2/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/sonivox/.gradle/caches/transforms-2/files-2.1/cc5e187227a54426322f207f1b645eda/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/sonivox/.gradle/caches/transforms-2/files-2.1/cc5e187227a54426322f207f1b645eda/AndroidManifest.xml:9:5-20
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:22:5-28:19
+MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7bbfe67cf11df65bf381dd1e3eca7eef/AndroidManifest.xml:11:5-15:19
+MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7bbfe67cf11df65bf381dd1e3eca7eef/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.volley:volley:1.1.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/444150996eed26323bdd8ddb7df7313c/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.1.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/444150996eed26323bdd8ddb7df7313c/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f7507a1b194f580d5dca957addaaf11f/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f7507a1b194f580d5dca957addaaf11f/AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e4e858f396650aac3161783e9e82f769/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e4e858f396650aac3161783e9e82f769/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a4ca0c59ad863def391fb7e907b71345/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a4ca0c59ad863def391fb7e907b71345/AndroidManifest.xml:9:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d2091294373fb7bb18b2f36253b34cab\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.fernando9825.pedidos.MainActivity
-ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:12:9-21:20
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:13:9-40
+activity#com.fernando9825.pedidos.PedidoActivity
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:14:9-17:68
 	android:label
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:14:13-45
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:16:13-58
 	android:theme
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:15:13-43
+activity#com.fernando9825.pedidos.MainActivity
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:18:9-27:20
+	android:label
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:20:13-45
+	android:theme
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:21:13-56
+	android:name
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml:25:27-74
 uses-sdk
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\126555833666fe781a68a59a2f7604c0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\126555833666fe781a68a59a2f7604c0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\2ff2dd75b0c2142a3bf1350314f287f6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\2ff2dd75b0c2142a3bf1350314f287f6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d412b9f3d54783fdf564413fadfc71c7\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d412b9f3d54783fdf564413fadfc71c7\AndroidManifest.xml:5:5-7:41
-MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d13580c86b98dd3274f8217f02dafd39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d13580c86b98dd3274f8217f02dafd39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\a6afc345f9f6dc747c2b58b677ef55f8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\a6afc345f9f6dc747c2b58b677ef55f8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\87f7cfa666ebfa5589ce8212d93c6a39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\87f7cfa666ebfa5589ce8212d93c6a39\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\0c9a8a93d08a67c82dfc276ddc2f3640\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\0c9a8a93d08a67c82dfc276ddc2f3640\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\336d3af706382b4c307582119a8f45c9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\336d3af706382b4c307582119a8f45c9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\448f8a7969deec90f5cfbe5cbb028119\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\448f8a7969deec90f5cfbe5cbb028119\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\40502b61652b449bfa3eea878b73264d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\40502b61652b449bfa3eea878b73264d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\407507bd1e88687d6980de012edda134\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\407507bd1e88687d6980de012edda134\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\7b3bb9fc8b0640a5a679ac02b00bad64\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\7b3bb9fc8b0640a5a679ac02b00bad64\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\8676bd550ca4021e6a88b9c7d61b86dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\8676bd550ca4021e6a88b9c7d61b86dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\ac9f15ef3b8080575514b0dcf209306c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\ac9f15ef3b8080575514b0dcf209306c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\9d846c21b14ece4243d2ea8ee2c92484\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\9d846c21b14ece4243d2ea8ee2c92484\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d789ceb58d2599a7a3b469d898f621b5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d789ceb58d2599a7a3b469d898f621b5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\5cdd31fadf3506aee8af67a2fbd72e1f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\5cdd31fadf3506aee8af67a2fbd72e1f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4bf5cca504113b19c703073073e5d6f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4bf5cca504113b19c703073073e5d6f2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d2091294373fb7bb18b2f36253b34cab\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\d2091294373fb7bb18b2f36253b34cab\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e49f78dc02fe0aac904c512214ca4db0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e49f78dc02fe0aac904c512214ca4db0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\b400e55853e241e307e4981d62476966\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\b400e55853e241e307e4981d62476966\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\a80dac793f07d6093ea6933562204244\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\a80dac793f07d6093ea6933562204244\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e2c77a83b28714a9ffc4bf51281781ae\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\e2c77a83b28714a9ffc4bf51281781ae\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\ab307a9f393179db4fad8e1439c722f0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\ab307a9f393179db4fad8e1439c722f0\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\8339d2e3280a06f39976ecda0ffe989f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\8339d2e3280a06f39976ecda0ffe989f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\84be7478c062c3f4bcddb1747ddc752d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\84be7478c062c3f4bcddb1747ddc752d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4c031a9813000b30518119e08b7a8423\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4c031a9813000b30518119e08b7a8423\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\29efdd4cd5e750246a023d054ad9b17e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\29efdd4cd5e750246a023d054ad9b17e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\9a5eb2a9f93e9a48540cf6f7f9ff67da\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\9a5eb2a9f93e9a48540cf6f7f9ff67da\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\2891b33bcbeaef48a079d15ac44ef8fb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\2891b33bcbeaef48a079d15ac44ef8fb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4c36f8382d70a720ad639ef94964f0cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\4c36f8382d70a720ad639ef94964f0cb\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0182f5b8da2ae7833a7794829b55ffa2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0182f5b8da2ae7833a7794829b55ffa2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7ac3b7b7f5fd9bc873762a610e4e174d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7ac3b7b7f5fd9bc873762a610e4e174d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/sonivox/.gradle/caches/transforms-2/files-2.1/cc5e187227a54426322f207f1b645eda/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/sonivox/.gradle/caches/transforms-2/files-2.1/cc5e187227a54426322f207f1b645eda/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:20:5-44
+MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7bbfe67cf11df65bf381dd1e3eca7eef/AndroidManifest.xml:7:5-9:41
+MERGED from [com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7bbfe67cf11df65bf381dd1e3eca7eef/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.volley:volley:1.1.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/444150996eed26323bdd8ddb7df7313c/AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:volley:1.1.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/444150996eed26323bdd8ddb7df7313c/AndroidManifest.xml:7:5-43
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f7507a1b194f580d5dca957addaaf11f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f7507a1b194f580d5dca957addaaf11f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/9e24e000b24f6ad251dbae0429bf134e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/9e24e000b24f6ad251dbae0429bf134e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/1efbccfe13ec58c4f65aeb506cc3b32e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/1efbccfe13ec58c4f65aeb506cc3b32e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/b47bae4f8ae234706b0376c366c2437f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/b47bae4f8ae234706b0376c366c2437f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/88c37f8685c85f301c2747fc57f71217/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/88c37f8685c85f301c2747fc57f71217/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e446e25edf6f167a881a266a26cbe82a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e446e25edf6f167a881a266a26cbe82a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/291c789f69a62b1c16f21047e3d2cded/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/291c789f69a62b1c16f21047e3d2cded/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7d27a7c02b00b3a5724a233427f57520/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7d27a7c02b00b3a5724a233427f57520/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/5a079490306c408171274523107b5ae2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/5a079490306c408171274523107b5ae2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a8757cc671df0b26101dd5a6943c2ed3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a8757cc671df0b26101dd5a6943c2ed3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/2d81ef0024a40a45af262f0f53d16873/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/2d81ef0024a40a45af262f0f53d16873/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/58735874520f2c58a08197f0165d74b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/58735874520f2c58a08197f0165d74b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/9cca2146c6af65e6844971ccad41fc9b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/9cca2146c6af65e6844971ccad41fc9b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a779d2f2c961073eb83e111c427b4333/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a779d2f2c961073eb83e111c427b4333/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/85d55aa507697f744678b5a3bfce10f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/85d55aa507697f744678b5a3bfce10f3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/d70b2c44e5ccbfc590155d9d1e157868/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/d70b2c44e5ccbfc590155d9d1e157868/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e4e858f396650aac3161783e9e82f769/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/e4e858f396650aac3161783e9e82f769/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f4af754958aa1e1c90f329500a490d86/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f4af754958aa1e1c90f329500a490d86/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/b0572d79c64d9d848db9a0b013405b13/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/b0572d79c64d9d848db9a0b013405b13/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0a3f65436c9daa482dc7f7370ec5de69/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/0a3f65436c9daa482dc7f7370ec5de69/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f72018ce968fcc28b40888e7ee4bf811/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/f72018ce968fcc28b40888e7ee4bf811/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/638cdeee7377ff241a5765752e21096f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/638cdeee7377ff241a5765752e21096f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/958cc1d138dfa4ca14fdeb75f28ab081/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/958cc1d138dfa4ca14fdeb75f28ab081/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/3dd6d2b779dcf90735ffda32f6f95dd9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/3dd6d2b779dcf90735ffda32f6f95dd9/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a4ca0c59ad863def391fb7e907b71345/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/a4ca0c59ad863def391fb7e907b71345/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:documentfile:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/44d4b89c6a46430f18130ddb79a48ac0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/44d4b89c6a46430f18130ddb79a48ac0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/c9c75952bdb4d3d61e4f18f388d007a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/c9c75952bdb4d3d61e4f18f388d007a3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/994a60a324f5f1a1b39694342dbeda01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/994a60a324f5f1a1b39694342dbeda01/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7a801030c9043c55ef2ddae6c19aaa8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/sonivox/.gradle/caches/transforms-2/files-2.1/7a801030c9043c55ef2ddae6c19aaa8d/AndroidManifest.xml:20:5-44
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Fernando\AndroidStudioProjects\Pedidos\app\src\main\AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		ADDED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
+		INJECTED from /home/sonivox/AndroidStudioProjects/pedidos/app/src/main/AndroidManifest.xml
 provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:23:9-27:43
+ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:23:9-27:43
 	android:authorities
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:25:13-68
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:25:13-68
 	android:multiprocess
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:27:13-40
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:27:13-40
 	android:exported
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:26:13-37
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [android.arch.lifecycle:extensions:1.1.1] C:\Users\Fernando\.gradle\caches\transforms-2\files-2.1\c201464e37bd008f0e39f40bf30e9b40\AndroidManifest.xml:24:13-83
+		ADDED from [android.arch.lifecycle:extensions:1.1.1] /home/sonivox/.gradle/caches/transforms-2/files-2.1/29a9f0ba7be6eb0d8c0c4ee48c18b882/AndroidManifest.xml:24:13-83

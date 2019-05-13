@@ -6,4 +6,5 @@
 
     <!--app strings-->
     <string name="refresh">Refrescando</string>
+    <string name="title_activity_pedido">PedidoActivity</string>
 </resources>
