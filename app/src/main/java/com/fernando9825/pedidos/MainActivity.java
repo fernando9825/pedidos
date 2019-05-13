@@ -1,15 +1,11 @@
 package com.fernando9825.pedidos;
 
-<<<<<<< HEAD
-import android.content.ContentProvider;
+
 import android.content.Context;
 import android.content.Intent;
-=======
 import android.content.SharedPreferences;
->>>>>>> master
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -37,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
     public ProductManager productManager;
     public static List<Product> products;
     public static List<Client> clients;
-<<<<<<< HEAD
+
     public static List<Pedidos> pedidos;
     Context context;
 
-=======
+
     public static final String IP_SERVER = "https://ppdm.herokuapp.com";
     public static boolean firstTime = true;
     public static boolean productsDownloaded = false;
@@ -49,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String products_key = "products_downloaded";
     public static final String clients_key = "clients_downloaded";
     public static SharedPreferences settings;
->>>>>>> master
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
         setContentView(R.layout.activity_main);
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
@@ -83,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        //.setAction("Action", null).show();
+                //.setAction("Action", null).show();
 
-                Intent intent = new Intent (view.getContext(), PedidoActivity.class);
+                Intent intent = new Intent(view.getContext(), PedidoActivity.class);
                 startActivityForResult(intent, 0);
 
             }
@@ -96,10 +90,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             products = getLocalProductList();
             clients = getLocalClientList();
-<<<<<<< HEAD
+
             pedidos = getLocalPedidosList();
 
-=======
 
             if (products == null) {
                 ProductManager productManager = new ProductManager(this);
@@ -112,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 clientManager.loadClientsToLocalDB();
 
             }
->>>>>>> master
+
         }
 
     }
@@ -123,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         return getLocalProductList() == null && getLocalClientList() == null;
     }
 
-    private List<Pedidos> getLocalPedidosList(){
+    private List<Pedidos> getLocalPedidosList() {
         List<Pedidos> pedidos = new ArrayList<>();
 
         try {
@@ -190,15 +183,11 @@ public class MainActivity extends AppCompatActivity {
         ClientManager clientManager = new ClientManager(this);
         clientManager.loadClientsToLocalDB();
 
-<<<<<<< HEAD
+
         PedidosManager pedidosManager = new PedidosManager(this);
         pedidosManager.loadPedidos();
-=======
+
 
     }
 
-
->>>>>>> master
-
-    }
 }
