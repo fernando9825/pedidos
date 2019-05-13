@@ -12,6 +12,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.fernando9825.pedidos.SQLite.SQLiteClients;
 import com.google.gson.Gson;
+import com.google.gson.JsonIOException;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -76,6 +77,13 @@ public class ClientManager {
 
                             Toast.makeText(context, "Se han descargado los datos del servidor", Toast.LENGTH_LONG).show();
 
+                            /*if (!MainActivity.productsDownloaded && !MainActivity.clientsDownloaded) {
+                                MainActivity.settings.edit().putBoolean(MainActivity.clients_key, true).commit();
+                                Intent nextIntent = new Intent(context, MainActivity.class);
+                                nextIntent.putExtra(EXTRA_TEXT, "Hello!");
+                                ProcessPhoenix.triggerRebirth(context, nextIntent);
+                            }*/
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -91,48 +99,26 @@ public class ClientManager {
         //adding our stringrequest to queue
         Volley.newRequestQueue(context).add(stringRequest);
 
-
-        /*RequestTickle mRequestTickle = VolleyTickle.newRequestTickle(context);
-
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Client.URL_CLIENT,
-                null, null);
-        mRequestTickle.add(stringRequest);
-        NetworkResponse response = mRequestTickle.start();
-
-        if (response.statusCode == 200) {
-            String data = VolleyTickle.parseResponse(response);
-
-            clientList = new ArrayList<>();
-            List<Client> clients;
-            Gson gson = new Gson();
+    }
 
 
-            clients = Arrays.asList(gson.fromJson(data, Client[].class));
-            clientList = clients;
+    public List<Client> getLocalClientList() {
+
+        List<Client> client = new ArrayList<>();
+
+        try {
 
             SQLiteClients sqLiteClients = new SQLiteClients(context,
                     SQLiteClients.CLIENTS, null, 1);
-            //establece el metod para hacer que podamos escribir sobre la bd creada
-            SQLiteDatabase bd = sqLiteClients.getWritableDatabase();
+            client = sqLiteClients.getLocalClients();
 
-            ContentValues registro = new ContentValues();
+        } catch (JsonIOException e) {
+            e.printStackTrace();
+            Toast.makeText(context, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
-            for (int i = 0; i < clients.size(); i++) {
-                registro.put("nombre", clients.get(i).getNombre());
-                registro.put("direccion", clients.get(i).getDireccion());
-                registro.put("telefono", clients.get(i).getTelefono());
-                bd.insert(SQLiteClients.CLIENTS, null, registro);
+        }
 
-                registro.clear();
-            }
-
-            bd.close();
-
-
-            Toast.makeText(context, "Se han descargado los datos del servidor", Toast.LENGTH_LONG).show();
-        } else {
-            clientList = null;
-        }*/
+        return client;
 
     }
 }

@@ -2,6 +2,7 @@ package com.fernando9825.pedidos.ui.main;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,16 +14,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fernando9825.pedidos.MainActivity;
 import com.fernando9825.pedidos.R;
 import com.fernando9825.pedidos.clientes.Client;
+import com.fernando9825.pedidos.clientes.ClientManager;
 import com.fernando9825.pedidos.clientes.ClientsAdapter;
 import com.fernando9825.pedidos.productos.Product;
+import com.fernando9825.pedidos.productos.ProductManager;
 import com.fernando9825.pedidos.productos.ProductsAdapter;
+import com.jakewharton.processphoenix.ProcessPhoenix;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.content.Intent.EXTRA_TEXT;
+import static com.fernando9825.pedidos.MainActivity.IP_SERVER;
 
 //import com.fernando9825.pedidos.productos.*;
 
@@ -86,30 +94,6 @@ public class PlaceholderFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                // here we have to get data on app start load all products to local DB
-                /*if(localDataBaseIsEmpty()) {
-                    ProductManager productManager = new ProductManager(getContext());
-                    productManager.loadProductsToLocalDB();
-                    products = productManager.productList;
-                }
-
-
-                // getting adapter for the recycler view
-                ProductsAdapter adapter2 = new ProductsAdapter(getContext(), products);
-                recyclerView.setAdapter(adapter2);
-                swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
-                */
-
-
-            }
-
-
-        });
-
-
         products = MainActivity.products;
         clients = MainActivity.clients;
 
@@ -124,50 +108,102 @@ public class PlaceholderFragment extends Fragment {
                 fragmentNumberGlobal = Integer.parseInt(s.split(":")[1]) - 1;
                 //textView.setText(MainActivity.products.get(0).getDescripcion());
 
+
                 //swipeRefreshLayout.setRefreshing(false);
+                workFlow();
 
-                // by default setting an adapter to the recycler view
-                List<Product> noProduct = new ArrayList<>();
-                noProduct.add(new Product(null));
-                switch (fragmentNumberGlobal) {
-                    case PEDIDOS:
-                        noProduct.remove(0);
-                        noProduct.add(new Product("Aún sin pedidos, presione el botón para crear uno nuevo"));
-                        recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
-                        break;
 
-                    case PRODUCTOS:
+                swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
 
-                        if (products != null) {
-                            loadProductsToRecycler();
 
-                        } else {
-                            noProduct.remove(0);
-                            noProduct.add(new Product("Aún sin productos, deslice hace abajo para refrescar"));
-                            recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                        switch (fragmentNumberGlobal) {
+                            case PEDIDOS:
+                                Toast.makeText(getContext(), "Pedidos", Toast.LENGTH_SHORT).show();
+                                break;
 
+                            case PRODUCTOS:
+
+
+                                if (products != null) {
+                                    loadProductsToRecycler();
+                                } else {
+                                    Toast.makeText(getContext(), "No se ha podido refrescar", Toast.LENGTH_SHORT).show();
+                                    Intent nextIntent = new Intent(getContext(), MainActivity.class);
+                                    nextIntent.putExtra(EXTRA_TEXT, "Hello!");
+                                    ProcessPhoenix.triggerRebirth(getContext(), nextIntent);
+                                }
+
+                                break;
+
+                            case CLIENTES:
+
+                                if (clients != null) {
+                                    loadClientsToRecycler();
+                                } else {
+                                    Toast.makeText(getContext(), "No se ha podido refrescar", Toast.LENGTH_SHORT).show();
+                                    Intent nextIntent = new Intent(getContext(), MainActivity.class);
+                                    nextIntent.putExtra(EXTRA_TEXT, "Hello!");
+                                    ProcessPhoenix.triggerRebirth(getContext(), nextIntent);
+                                }
+
+                                break;
                         }
 
+                        swipeRefreshLayout.setRefreshing(false);
 
-                        break;
 
-                    case CLIENTES:
+                    }
 
-                        if (clients != null) {
-                            loadClientsToRecycler();
-                        } else {
 
-                            noProduct.remove(0);
-                            noProduct.add(new Product("Aún sin clientes, deslice hace abajo para refrescar"));
-                            recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
-                        }
+                });
 
-                        break;
-                }
             }
         });
 
         return root;
+    }
+
+    private void workFlow() {
+        // by default setting an adapter to the recycler view
+        List<Product> noProduct = new ArrayList<>();
+        noProduct.add(new Product(null));
+        switch (fragmentNumberGlobal) {
+            case PEDIDOS:
+                noProduct.remove(0);
+                noProduct.add(new Product("Aún sin pedidos, presione el botón para crear uno nuevo"));
+                recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                break;
+
+            case PRODUCTOS:
+
+                if (products != null) {
+                    loadProductsToRecycler();
+
+                } else {
+                    noProduct.remove(0);
+                    noProduct.add(new Product("Aún sin productos, deslice hace abajo para refrescar"));
+                    recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+
+                }
+
+
+                break;
+
+            case CLIENTES:
+
+                if (clients != null) {
+                    loadClientsToRecycler();
+                } else {
+
+                    noProduct.remove(0);
+                    noProduct.add(new Product("Aún sin clientes, deslice hace abajo para refrescar"));
+                    recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                }
+
+                break;
+        }
     }
 
     private void loadProductsToRecycler() {
@@ -186,6 +222,28 @@ public class PlaceholderFragment extends Fragment {
         ClientsAdapter adapter2 = new ClientsAdapter(getContext(), clients);
         recyclerView.setAdapter(adapter2);
         swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
+    }
+
+    private void getDataFromServer() {
+        // fetch products and clients data from server
+        if (products == null || clients == null) {
+            Toast.makeText(getContext(), "Intentando obtener información desde: " + IP_SERVER,
+                    Toast.LENGTH_LONG).show();
+        }
+
+        if (products == null) {
+            ProductManager productManager = new ProductManager(getContext());
+            productManager.loadProductsToLocalDB();
+        }
+
+
+        if (clients == null) {
+            ClientManager clientManager = new ClientManager(getContext());
+            clientManager.loadClientsToLocalDB();
+
+        }
+
+
     }
 
 
