@@ -19,7 +19,6 @@ public class SQLitePedidos extends SQLiteOpenHelper {
 
 
     public static final String PEDIDOS = "pedidos";
-    public static final String PEDIDOS_DETALLE = "pedidos_detalle";
 
     private final String PK_pedidos = "PRIMARY KEY";
     private final String PK = "PRIMARY KEY AUTOINCREMENT DEFAULT 1";
@@ -82,11 +81,18 @@ public class SQLitePedidos extends SQLiteOpenHelper {
         return pedidosList;
     }
 
+    public void borrarPedidos() {
+        SQLiteDatabase bd = this.getWritableDatabase();
+
+        bd.delete(SQLitePedidos.PEDIDOS, null, null);
+    }
+
     //deben crearse inicialmente estos 2 metodos  onCreate(SQLiteDatabase db), onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     @Override
     public void onCreate(SQLiteDatabase db) {
         //el metodo  ejecuta una sentencia para crear la tabla con sus campos y tipos
         db.execSQL(pedido_table);
+        db.close();
     }
 
     @Override
