@@ -18,7 +18,6 @@ import com.fernando9825.pedidos.SQLite.SQLiteProducts;
 import com.fernando9825.pedidos.clientes.Client;
 import com.fernando9825.pedidos.clientes.ClientManager;
 import com.fernando9825.pedidos.pedidos.Pedidos;
-import com.fernando9825.pedidos.pedidos.PedidosManager;
 import com.fernando9825.pedidos.productos.Product;
 import com.fernando9825.pedidos.productos.ProductManager;
 import com.fernando9825.pedidos.ui.main.SectionsPagerAdapter;
@@ -186,8 +185,9 @@ public class MainActivity extends AppCompatActivity {
         clientManager.loadClientsToLocalDB();
 
 
-        PedidosManager pedidosManager = new PedidosManager(this);
-        pedidosManager.loadPedidos();
+        // not getting info from server Maltez
+        //PedidosManager pedidosManager = new PedidosManager(this);
+        //pedidosManager.loadPedidos();
 
 
     }
