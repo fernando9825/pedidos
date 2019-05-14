@@ -7,16 +7,23 @@ public class Pedidos {
     private String cliente;
     private int cantidad;
     private String fecha;
+    private double precio;
+    private double total;
 
-    public Pedidos(String id_pedido, String producto, String cliente, int cantidad, String fecha) {
+    public Pedidos(String id_pedido, String producto, String cliente, int cantidad, String fecha, double precio, double total) {
         this.id_pedido = id_pedido;
         this.producto = producto;
         this.cliente = cliente;
         this.cantidad = cantidad;
         this.fecha = fecha;
+        this.precio = precio;
+        this.total = total;
 
     }
 
+    public Pedidos(String id_pedido) {
+        this.id_pedido = id_pedido;
+    }
 
     public String getId_pedido() {
         return id_pedido;
@@ -56,5 +63,21 @@ public class Pedidos {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 }

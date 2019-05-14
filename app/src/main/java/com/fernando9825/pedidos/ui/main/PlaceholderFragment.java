@@ -21,6 +21,8 @@ import com.fernando9825.pedidos.R;
 import com.fernando9825.pedidos.clientes.Client;
 import com.fernando9825.pedidos.clientes.ClientManager;
 import com.fernando9825.pedidos.clientes.ClientsAdapter;
+import com.fernando9825.pedidos.pedidos.Pedidos;
+import com.fernando9825.pedidos.pedidos.PedidosAdapter;
 import com.fernando9825.pedidos.productos.Product;
 import com.fernando9825.pedidos.productos.ProductManager;
 import com.fernando9825.pedidos.productos.ProductsAdapter;
@@ -49,6 +51,8 @@ public class PlaceholderFragment extends Fragment {
     SwipeRefreshLayout swipeRefreshLayout;
     private List<Product> products;
     private List<Client> clients;
+    private List<Pedidos> orders;
+
     private final int PEDIDOS = 0,
             PRODUCTOS = 1,
             CLIENTES = 2;
@@ -96,7 +100,11 @@ public class PlaceholderFragment extends Fragment {
 
         products = MainActivity.products;
         clients = MainActivity.clients;
+        orders = MainActivity.pedidos;
 
+        if (orders != null) {
+            loadPedidosToRecycler();
+        }
 
         // when changing tab this event is invoked
         pageViewModel.getText().observe(this, new Observer<String>() {
@@ -121,6 +129,15 @@ public class PlaceholderFragment extends Fragment {
                         switch (fragmentNumberGlobal) {
                             case PEDIDOS:
                                 Toast.makeText(getContext(), "Pedidos", Toast.LENGTH_SHORT).show();
+
+                                if (MainActivity.pedidos != null) {
+                                    loadPedidosToRecycler();
+                                } else {
+                                    List<Pedidos> noPedidos = new ArrayList<>();
+                                    noPedidos.add(new Pedidos("Aún sin pedidos, presione el botón para crear uno nuevo"));
+                                    recyclerView.setAdapter(new PedidosAdapter(getContext(), noPedidos));
+                                }
+
                                 break;
 
                             case PRODUCTOS:
@@ -171,9 +188,15 @@ public class PlaceholderFragment extends Fragment {
         noProduct.add(new Product(null));
         switch (fragmentNumberGlobal) {
             case PEDIDOS:
-                noProduct.remove(0);
-                noProduct.add(new Product("Aún sin pedidos, presione el botón para crear uno nuevo"));
-                recyclerView.setAdapter(new ProductsAdapter(getContext(), noProduct));
+                if (orders != null) {
+                    loadPedidosToRecycler();
+                } else {
+                    List<Pedidos> noPedidos = new ArrayList<>();
+                    noPedidos.add(new Pedidos("Aún sin pedidos, presione el botón para crear uno nuevo"));
+                    recyclerView.setAdapter(new PedidosAdapter(getContext(), noPedidos));
+                }
+
+
                 break;
 
             case PRODUCTOS:
@@ -204,6 +227,15 @@ public class PlaceholderFragment extends Fragment {
 
                 break;
         }
+    }
+
+    private void loadPedidosToRecycler() {
+        // getting adapter for the recycler view
+        //swipeRefreshLayout.setRefreshing(false);
+        //swipeRefreshLayout.setEnabled(false);
+        PedidosAdapter adapter2 = new PedidosAdapter(getContext(), orders);
+        recyclerView.setAdapter(adapter2);
+        swipeRefreshLayout.setRefreshing(false); // adapter on, so set it to false
     }
 
     private void loadProductsToRecycler() {

@@ -37,22 +37,35 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidosV
 
         Pedidos pedidos = pedidosList.get(i);
 
-        pedidosViewHolder.textViewId.setText(pedidos.getId_pedido());
-        pedidosViewHolder.textViewProducto.setText(pedidos.getProducto());
-        pedidosViewHolder.textViewCliente.setText(pedidos.getCliente());
-        pedidosViewHolder.textViewCantidad.setText(pedidos.getCantidad());
-        pedidosViewHolder.textViewFecha.setText(pedidos.getFecha());
+        if (pedidos.getId_pedido().equals("Aún sin pedidos, presione el botón para crear uno nuevo")) {
+            pedidosViewHolder.textViewId.setText("Aún sin pedidos, presione el botón para crear uno nuevo");
+            pedidosViewHolder.textViewProducto.setText("");
+            pedidosViewHolder.textViewCliente.setText("");
+            pedidosViewHolder.textViewCantidad.setText("");
+            pedidosViewHolder.textViewFecha.setText("");
+            pedidosViewHolder.textViewTotal.setText("");
+            pedidosViewHolder.textViewPrecio.setText("");
+        } else {
+            pedidosViewHolder.textViewId.setText("ID-PEDIDO: " + pedidos.getId_pedido());
+            pedidosViewHolder.textViewProducto.setText("producto: " + pedidos.getProducto());
+            pedidosViewHolder.textViewCliente.setText("cliente: " + pedidos.getCliente());
+            pedidosViewHolder.textViewCantidad.setText("cantidad: " + pedidos.getCantidad());
+            pedidosViewHolder.textViewFecha.setText("fecha: " + pedidos.getFecha());
+            pedidosViewHolder.textViewTotal.setText("Total: $" + pedidos.getTotal());
+            pedidosViewHolder.textViewPrecio.setText("precio: $" + pedidos.getPrecio());
+        }
 
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return pedidosList.size();
     }
 
     public class PedidosViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewId, textViewProducto, textViewCliente, textViewCantidad, textViewFecha;
+        TextView textViewId, textViewProducto, textViewCliente, textViewCantidad, textViewFecha,
+                textViewTotal, textViewPrecio;
 
         public PedidosViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +74,8 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidosV
             textViewCliente = itemView.findViewById(R.id.clienteTXT);
             textViewCantidad = itemView.findViewById(R.id.cantidadTXT);
             textViewFecha = itemView.findViewById(R.id.fechaTXT);
+            textViewTotal = itemView.findViewById(R.id.totalTXT);
+            textViewPrecio = itemView.findViewById(R.id.precioTXT);
         }
     }
 }

@@ -78,11 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 //.setAction("Action", null).show();
 
+
                 Intent intent = new Intent(view.getContext(), PedidoActivity.class);
                 startActivityForResult(intent, 0);
 
             }
         });
+
 
         if (localDataBaseIsEmpty()) {
             getDataFromServer();
@@ -105,6 +107,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            if (pedidos == null) {
+                Toast.makeText(this, "Pedidos es nulo", Toast.LENGTH_LONG).show();
+                SQLitePedidos sqLitePedidos = new SQLitePedidos(this, SQLitePedidos.PEDIDOS, null, 1);
+                pedidos = sqLitePedidos.getLocalPedidos();
+            } else {
+                //Toast.makeText(this, pedidos.get(0).getProducto(), Toast.LENGTH_LONG).show();
+            }
+
         }
 
     }
@@ -116,19 +126,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private List<Pedidos> getLocalPedidosList() {
-        List<Pedidos> pedidos = new ArrayList<>();
+        List<Pedidos> pedidos;
 
-        try {
-            SQLitePedidos sqLitePedidos = new SQLitePedidos(this,
-                    SQLitePedidos.PEDIDOS, null, 1);
+        SQLitePedidos sqLitePedidos = new SQLitePedidos(this,
+                SQLitePedidos.PEDIDOS, null, 1);
 
 
-            pedidos = sqLitePedidos.getLocalPedidos();
-
-        } catch (JsonIOException e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
+        pedidos = sqLitePedidos.getLocalPedidos();
 
         return pedidos;
     }
@@ -165,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (JsonIOException e) {
             e.printStackTrace();
-            Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
         }
 
@@ -188,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
         // not getting info from server Maltez
         //PedidosManager pedidosManager = new PedidosManager(this);
         //pedidosManager.loadPedidos();
+        pedidos = getLocalPedidosList();
 
 
     }

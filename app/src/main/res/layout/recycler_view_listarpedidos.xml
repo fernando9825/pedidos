@@ -19,22 +19,13 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
             android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/productoTXT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/idPedidoTXT"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Nombre del producto"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="@android:color/black" />
+
 
         <TextView
             android:id="@+id/clienteTXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/productoTXT"
+            android:layout_below="@id/idPedidoTXT"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:text="Cliente"
@@ -42,10 +33,21 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/cantidadTXT"
+            android:id="@+id/productoTXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/clienteTXT"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Nombre del producto"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/cantidadTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productoTXT"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:text="Cantidad"
@@ -53,10 +55,32 @@
             android:textColor="@android:color/black" />
 
         <TextView
-            android:id="@+id/fechaTXT"
+            android:id="@+id/precioTXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/cantidadTXT"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Precio"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/totalTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/precioTXT"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Total"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/fechaTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/totalTXT"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:text="Fecha"
