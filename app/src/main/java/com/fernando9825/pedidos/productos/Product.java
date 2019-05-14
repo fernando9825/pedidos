@@ -9,7 +9,6 @@ public class Product {
     private int id;
     private String descripcion;
     private String barcode;
-    private double costo;
     private double precio;
     private String image;
 
@@ -23,6 +22,7 @@ public class Product {
 
     public Product(String descripcion) {
         this.descripcion = descripcion;
+        this.image = "nada";
     }
 
     public int getId() {

@@ -44,7 +44,7 @@ public class ProductManager extends AppCompatActivity {
          * Entonces tenemos  un Response Listener y un Error Listener
          * En el response listener obtenemos el  JSON como un String
          * */
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Product.URL_PRODUCT,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://apps.fmoues.edu.sv/gestion/consultarProd.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

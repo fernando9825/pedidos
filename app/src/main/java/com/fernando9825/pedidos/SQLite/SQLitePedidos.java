@@ -21,7 +21,7 @@ public class SQLitePedidos extends SQLiteOpenHelper {
     public static final String PEDIDOS = "pedidos";
     private final String PK = "PRIMARY KEY AUTOINCREMENT DEFAULT 1";
 
-    private String pedido_table = "CREATE TABLE " + PEDIDOS + "(id INTEGER " + PK +
+    private String pedido_table = "CREATE TABLE IF NOT EXISTS " + PEDIDOS + "(id INTEGER " + PK +
             ", producto text, cliente text, cantidad text, fecha text)";
 
     public SQLitePedidos(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -30,6 +30,7 @@ public class SQLitePedidos extends SQLiteOpenHelper {
 
 
     public List<Pedidos> getLocalPedidos() {
+
         SQLiteDatabase bd = this.getWritableDatabase();
         Cursor filas = bd.rawQuery("SELECT * FROM " + PEDIDOS, null);
 

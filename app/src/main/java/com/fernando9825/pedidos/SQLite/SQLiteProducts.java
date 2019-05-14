@@ -52,7 +52,7 @@ public class SQLiteProducts extends SQLiteOpenHelper {
                         filas.getString(1), // descripcion
                         filas.getString(2), // barcode
                         Double.parseDouble(filas.getString(3)), // precio
-                        filas.getString(4));
+                        filas.getString(4)); // img
                 productList.add(product);
             } catch (Exception e) {
 
