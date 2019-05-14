@@ -1,9 +1,6 @@
 package com.fernando9825.pedidos;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,9 +13,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
-import com.fernando9825.pedidos.SQLite.SQLitePedidos;
 
 import java.util.ArrayList;
 
@@ -44,21 +38,21 @@ public class PedidoActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        cantidad = (EditText) findViewById(R.id.txtcantidad);
-        txtPrecio = (TextView)findViewById(R.id.txtPrecio);
-        txtNombre = (TextView)findViewById(R.id.txtNombre);
+        cantidad = findViewById(R.id.txtcantidad);
+        txtPrecio = findViewById(R.id.txtPrecio);
+        txtNombre = findViewById(R.id.txtNombre);
 
 
         //para clientes
-        txtDireccion1= (TextView) findViewById(R.id.txtDireccionClient);
+        txtDireccion1 = findViewById(R.id.txtDireccionClient);
         obtenerClientes();
         obtenerProductos();
-        comboPersonas= (Spinner) findViewById(R.id.spinnerClient);
+        comboPersonas = findViewById(R.id.spinnerClient);
         ArrayAdapter<CharSequence> adaptadorClientes=new ArrayAdapter
                 (this ,android.R.layout.simple_spinner_item, listaPersonas);
 
 
-        comboProductos= (Spinner)findViewById(R.id.spinner);
+        comboProductos = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adaptador=new ArrayAdapter
                 (this,android.R.layout.simple_spinner_item,listaProductos);
         comboPersonas.setPrompt("Seleccione Cliente");
@@ -88,7 +82,7 @@ public class PedidoActivity extends AppCompatActivity {
 
                 if (position!=0){
                     txtNombre.setText(MainActivity.products.get(position-1).getDescripcion());
-                    txtPrecio.setText(String.valueOf("Precio:   "+MainActivity.products.get(position-1).getPrecio()+"\n"));
+                    txtPrecio.setText("Precio:   " + MainActivity.products.get(position - 1).getPrecio() + "\n");
 
                 }else{
                     txtNombre.setText("");
@@ -115,26 +109,10 @@ public class PedidoActivity extends AppCompatActivity {
 
     }
 
-    SQLitePedidos pedidos = new SQLitePedidos(this, "", null, 1);
-    SQLiteDatabase db = pedidos.getWritableDatabase();
 
     public void hacerPedido(View view){
-
-        //dato del pedido
-        String producto = comboProductos.getSelectedItem().toString();
-        String cliente = comboPersonas.getSelectedItem().toString();
+        //procede a hacer el pedido
         String cant = cantidad.getText().toString();
-
-        //inserta el pedido
-        ContentValues registro = new ContentValues();
-        registro.put("id", getUltimoIDPedido());
-        registro.put("producto", producto);
-        registro.put("cliente", cliente);
-        registro.put("cantidad", Integer.parseInt(cant));
-        registro.put("fecha", (String)null);
-
-        db.insert("pedidos", null, registro);
-        db.close();
 
         Toast.makeText(this, "Pedido Hecho :D",
                 Toast.LENGTH_SHORT).show();
@@ -142,15 +120,6 @@ public class PedidoActivity extends AppCompatActivity {
         //despues de hacer el pedido
         Intent intent = new Intent (view.getContext(), MainActivity.class);
         startActivityForResult(intent, 0);
-    }
-    public int getUltimoIDPedido(){
-        int ultimoID=0;
-        SQLiteDatabase db= pedidos.getReadableDatabase();
-        Cursor cursor=db.rawQuery("SELECT * FROM pedidos where id = (select max(id_pedido) from pedidos)",null);
-        while (cursor.moveToNext()){
-            ultimoID = cursor.getInt(0);
-        }
-        return ultimoID;
     }
 
     public void limpiar(View view){
