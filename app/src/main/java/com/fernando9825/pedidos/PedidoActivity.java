@@ -1,6 +1,9 @@
 package com.fernando9825.pedidos;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.fernando9825.pedidos.SQLite.SQLitePedidos;
 
 import java.util.ArrayList;
 
@@ -109,17 +114,50 @@ public class PedidoActivity extends AppCompatActivity {
 
     }
 
-
     public void hacerPedido(View view){
-        //procede a hacer el pedido
+        SQLitePedidos pedidos = new SQLitePedidos(this, "pedido_table", null, 1);
+        SQLiteDatabase db = pedidos.getWritableDatabase();
+        //dato del pedido
+        String producto = comboProductos.getSelectedItem().toString();
+        String cliente = comboPersonas.getSelectedItem().toString();
         String cant = cantidad.getText().toString();
 
+        //inserta el pedido
+        ContentValues registro = new ContentValues();
+        registro.put("producto", producto);
+        registro.put("cliente", cliente);
+        registro.put("cantidad", Integer.parseInt(cant));
+        registro.put("fecha", (String) null);
+
+        db.insert("pedido_table", null, registro);
+        db.close();
+        pedidoDetalle();
         Toast.makeText(this, "Pedido Hecho :D",
                 Toast.LENGTH_SHORT).show();
 
         //despues de hacer el pedido
         Intent intent = new Intent (view.getContext(), MainActivity.class);
         startActivityForResult(intent, 0);
+    }
+
+    public void pedidoDetalle(){
+        SQLitePedidos pedidos = new SQLitePedidos(this, "pedido_detalle", null, 1);
+        SQLiteDatabase db = pedidos.getWritableDatabase();
+        //dato del pedido
+        String producto = comboProductos.getSelectedItem().toString();
+        String cliente = comboPersonas.getSelectedItem().toString();
+        String cant = cantidad.getText().toString();
+
+        //inserta el pedido
+        ContentValues registro = new ContentValues();
+        registro.put("producto", producto);
+        registro.put("cantidad", Integer.parseInt(cant));
+
+        db.insert("pedido_detalle", null, registro);
+        db.close();
+
+        Toast.makeText(this, "Pedido detalle hecho :D",
+                Toast.LENGTH_SHORT).show();
     }
 
     public void limpiar(View view){
@@ -154,5 +192,4 @@ public class PedidoActivity extends AppCompatActivity {
         }
 
     }
-
 }

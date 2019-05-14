@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
             if (clients == null) {
                 ClientManager clientManager = new ClientManager(this);
                 clientManager.loadClientsToLocalDB();
-
             }
 
         }
@@ -122,7 +121,9 @@ public class MainActivity extends AppCompatActivity {
         try {
             SQLitePedidos sqLitePedidos = new SQLitePedidos(this,
                     SQLitePedidos.PEDIDOS, null, 1);
-            pedidos = sqLitePedidos.getLocalPedidos();
+
+            //porque no tiene nada que cargar da error
+            //pedidos = sqLitePedidos.getLocalPedidos();
 
         } catch (JsonIOException e) {
             e.printStackTrace();

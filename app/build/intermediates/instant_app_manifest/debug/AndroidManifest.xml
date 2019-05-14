@@ -41,6 +41,12 @@
             android:authorities="com.fernando9825.pedidos.lifecycle-trojan"
             android:exported="false"
             android:multiprocess="true" />
+
+        <activity
+            android:name="com.jakewharton.processphoenix.ProcessPhoenix"
+            android:process=":phoenix"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.fernando9825.pedidos.com.android.tools.ir.server.InstantRunContentProvider"

@@ -49,7 +49,6 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ClientVi
         clientViewHolder.textViewDireccion.setText(client.getDireccion());
         clientViewHolder.textViewTelefono.setText(client.getTelefono());
 
-
     }
 
     @Override
