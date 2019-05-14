@@ -2,14 +2,14 @@ package com.fernando9825.pedidos.pedidos;
 
 public class Pedidos {
 
-    private int id;
+    private String id_pedido;
     private String producto;
     private String cliente;
-    private String cantidad;
+    private int cantidad;
     private String fecha;
 
-    public Pedidos(int id, String producto, String cliente, String cantidad, String fecha) {
-        this.id = id;
+    public Pedidos(String id_pedido, String producto, String cliente, int cantidad, String fecha) {
+        this.id_pedido = id_pedido;
         this.producto = producto;
         this.cliente = cliente;
         this.cantidad = cantidad;
@@ -18,32 +18,42 @@ public class Pedidos {
     }
 
 
-    public int getId() {
-        return id;
+    public String getId_pedido() {
+        return id_pedido;
     }
+
+    public void setId_pedido(String id_pedido) {
+        this.id_pedido = id_pedido;
+    }
+
     public String getProducto() {
         return producto;
     }
+
+    public void setProducto(String producto) {
+        this.producto = producto;
+    }
+
     public String getCliente() {
         return cliente;
     }
-    public String getCantidad() {
+
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
+    }
+
+    public int getCantidad() {
         return cantidad;
     }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
     public String getFecha() {
         return fecha;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public void setProducto(String producto) {
-        this.producto = producto;
-    }
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
-    }
-    public void setCantidad(String cantidad) { this.cantidad = cantidad; }
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }

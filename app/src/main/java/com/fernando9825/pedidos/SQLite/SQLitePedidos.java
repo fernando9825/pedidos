@@ -25,7 +25,7 @@ public class SQLitePedidos extends SQLiteOpenHelper {
     private final String PK = "PRIMARY KEY AUTOINCREMENT DEFAULT 1";
 
     private String pedido_table = "CREATE TABLE IF NOT EXISTS " + PEDIDOS + "(id_pedido text " + PK_pedidos +
-            ", producto text, cliente text, cantidad text, fecha DATE DEFAULT (datetime('now','localtime')))";
+            ", cliente text, producto text, fecha DATE DEFAULT (datetime('now','localtime')))";
 
     private String pedido_detalle = "CREATE TABLE IF NOT EXISTS " + PEDIDOS_DETALLE + "(id INTEGER " + PK +
             ", id_pedido text, producto text, cantidad int)";
@@ -38,22 +38,23 @@ public class SQLitePedidos extends SQLiteOpenHelper {
     public List<Pedidos> getLocalPedidos() {
 
         SQLiteDatabase bd = this.getWritableDatabase();
-        Cursor filas = bd.rawQuery("SELECT * FROM " + PEDIDOS, null);
+        Cursor filas_pedido = bd.rawQuery("SELECT * FROM " + PEDIDOS, null);
+        Cursor filas_detalle = bd.rawQuery("SELECT * FROM " + PEDIDOS_DETALLE, null);
 
-        if (filas.getCount() == 0) {
+        if (filas_pedido.getCount() == 0 || filas_detalle.getColumnCount() == 0) {
             bd.close();
             return null;
         }
 
         List<Pedidos> pedidosList = new ArrayList<>();
 
-        while (filas.moveToNext()) {
+        while (filas_pedido.moveToNext()) {
             Pedidos pedidos = new Pedidos(
-                    Integer.parseInt(filas.getString(0)),
-                    filas.getString(1),
-                    filas.getString(2),
-                    filas.getString(3),
-                    filas.getString(4)
+                    filas_pedido.getString(0), // id_pedido
+                    filas_pedido.getString(1), // cliente
+                    filas_pedido.getString(2), // producto
+                    Integer.parseInt(filas_detalle.getString(3)), // cantidad
+                    filas_pedido.getString(4) // fecha
             );
             pedidosList.add(pedidos);
         }
