@@ -25,7 +25,7 @@ public class Pedidos {
         this.id_pedido = id_pedido;
     }
 
-    public String getId_pedido() {
+    public int getId_pedido() {
         return id_pedido;
     }
 

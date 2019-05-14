@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/fernando9825/AndroidStudioProjects/pedidos/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/home/sonivox/AndroidStudioProjects/pedidos/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/fernando9825/.gradle/caches/transforms-2/files-2.1/2da5aa0a3c0bfc9067f704a28906432b/res/values-v16/values-v16.xml",
+                    "source": "/home/sonivox/.gradle/caches/transforms-2/files-2.1/7ac3b7b7f5fd9bc873762a610e4e174d/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/fernando9825/.gradle/caches/transforms-2/files-2.1/88bd3dece4b1cdbdd79391457d1daafd/res/values-v16/values-v16.xml",
+                    "source": "/home/sonivox/.gradle/caches/transforms-2/files-2.1/600d4a94a12b37f14434c244b2604758/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

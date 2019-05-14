@@ -192,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
         // not getting info from server Maltez
         //PedidosManager pedidosManager = new PedidosManager(this);
         //pedidosManager.loadPedidos();
+
         pedidos = getLocalPedidosList();
 
 

@@ -1,8 +1,11 @@
 package com.fernando9825.pedidos.ui.main;
 
+import android.app.AlertDialog;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,6 +21,7 @@ import android.widget.Toast;
 
 import com.fernando9825.pedidos.MainActivity;
 import com.fernando9825.pedidos.R;
+import com.fernando9825.pedidos.SQLite.SQLitePedidos;
 import com.fernando9825.pedidos.clientes.Client;
 import com.fernando9825.pedidos.clientes.ClientManager;
 import com.fernando9825.pedidos.clientes.ClientsAdapter;
@@ -33,6 +37,7 @@ import java.util.List;
 
 import static android.content.Intent.EXTRA_TEXT;
 import static com.fernando9825.pedidos.MainActivity.IP_SERVER;
+import static com.fernando9825.pedidos.MainActivity.pedidos;
 
 //import com.fernando9825.pedidos.productos.*;
 
@@ -128,10 +133,28 @@ public class PlaceholderFragment extends Fragment {
 
                         switch (fragmentNumberGlobal) {
                             case PEDIDOS:
-                                Toast.makeText(getContext(), "Pedidos", Toast.LENGTH_SHORT).show();
-
                                 if (MainActivity.pedidos != null) {
                                     loadPedidosToRecycler();
+
+                                    //confirma que quiere subir pedidos
+                                    final AlertDialog.Builder confirmarDialog = new AlertDialog.Builder(getContext());
+                                    confirmarDialog.setTitle("¡CONFIMACION REQUERIDA!");
+                                    confirmarDialog.setMessage("¿Seguro que quiere subir TODOS los pedidos REALIZADOS al servidor?");
+                                    confirmarDialog.setCancelable(false);
+                                    confirmarDialog.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            subirServidor();
+                                        }
+                                    });
+                                    confirmarDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                                    confirmarDialog.show();
+                                    //Toast.makeText(getContext(), "Pedidos", Toast.LENGTH_SHORT).show();
                                 } else {
                                     List<Pedidos> noPedidos = new ArrayList<>();
                                     noPedidos.add(new Pedidos("Aún sin pedidos, presione el botón para crear uno nuevo"));
@@ -227,6 +250,22 @@ public class PlaceholderFragment extends Fragment {
 
                 break;
         }
+    }
+
+    private void subirServidor(){
+
+        for (int i = 0; i < orders.size(); i++){
+            eliminarPedidos(orders.get(i).getId_pedido());
+        }
+        Toast.makeText(getContext(), "Pedidos Subidos al Servidor :D", Toast.LENGTH_SHORT).show();
+    }
+
+    private void eliminarPedidos(int subido){
+        SQLitePedidos admin = new SQLitePedidos(getContext(),
+                "pedidos", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase(); //Crea o abre una base  de datos util para lectura y escritura.
+        db.delete("pedidos", "id_pedido = " + subido, null);
+        db.close();
     }
 
     private void loadPedidosToRecycler() {

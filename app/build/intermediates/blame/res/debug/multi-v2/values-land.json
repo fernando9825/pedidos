@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/fernando9825/AndroidStudioProjects/pedidos/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/home/sonivox/AndroidStudioProjects/pedidos/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/fernando9825/.gradle/caches/transforms-2/files-2.1/2da5aa0a3c0bfc9067f704a28906432b/res/values-land/values-land.xml",
+                    "source": "/home/sonivox/.gradle/caches/transforms-2/files-2.1/7ac3b7b7f5fd9bc873762a610e4e174d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/fernando9825/.gradle/caches/transforms-2/files-2.1/70ca28e5e6cf3b485eb7ada80aacabce/res/values-land/values-land.xml",
+                    "source": "/home/sonivox/.gradle/caches/transforms-2/files-2.1/0182f5b8da2ae7833a7794829b55ffa2/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
