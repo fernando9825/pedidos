@@ -19,7 +19,7 @@ public class SQLitePedidos extends SQLiteOpenHelper {
 
 
     public static final String PEDIDOS = "pedidos";
-    public static final String PEDIDOS_DETALLE = "pedidos";
+    public static final String PEDIDOS_DETALLE = "pedidos_detalle";
 
     private final String PK_pedidos = "PRIMARY KEY";
     private final String PK = "PRIMARY KEY AUTOINCREMENT DEFAULT 1";

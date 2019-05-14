@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.fernando9825.pedidos.R;
-import com.fernando9825.pedidos.productos.ProductsAdapter;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public class PedidosAdapter extends RecyclerView.Adapter<PedidosAdapter.PedidosV
 
         Pedidos pedidos = pedidosList.get(i);
 
-        pedidosViewHolder.textViewId.setText(pedidos.getId());
+        pedidosViewHolder.textViewId.setText(pedidos.getId_pedido());
         pedidosViewHolder.textViewProducto.setText(pedidos.getProducto());
         pedidosViewHolder.textViewCliente.setText(pedidos.getCliente());
         pedidosViewHolder.textViewCantidad.setText(pedidos.getCantidad());
