@@ -19,10 +19,16 @@ public class SQLitePedidos extends SQLiteOpenHelper {
 
 
     public static final String PEDIDOS = "pedidos";
+    public static final String PEDIDOS_DETALLE = "pedidos";
+
+    private final String PK_pedidos = "PRIMARY KEY";
     private final String PK = "PRIMARY KEY AUTOINCREMENT DEFAULT 1";
 
-    private String pedido_table = "CREATE TABLE IF NOT EXISTS " + PEDIDOS + "(id INTEGER " + PK +
-            ", producto text, cliente text, cantidad text, fecha text)";
+    private String pedido_table = "CREATE TABLE IF NOT EXISTS " + PEDIDOS + "(id_pedido text " + PK_pedidos +
+            ", producto text, cliente text, cantidad text, fecha DATE DEFAULT (datetime('now','localtime')))";
+
+    private String pedido_detalle = "CREATE TABLE IF NOT EXISTS " + PEDIDOS_DETALLE + "(id INTEGER " + PK +
+            ", id_pedido text, producto text, cantidad int)";
 
     public SQLitePedidos(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -62,6 +68,7 @@ public class SQLitePedidos extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //el metodo  ejecuta una sentencia para crear la tabla con sus campos y tipos
         db.execSQL(pedido_table);
+        db.execSQL(pedido_detalle);
     }
 
     @Override
