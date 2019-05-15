@@ -296,7 +296,6 @@ public class PlaceholderFragment extends Fragment {
 
         }
 
-
         Toast.makeText(getContext(), "Pedidos Subidos al Servidor :D", Toast.LENGTH_SHORT).show();
     }
 
