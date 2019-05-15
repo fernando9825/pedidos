@@ -82,6 +82,12 @@ public class SQLitePedidos extends SQLiteOpenHelper {
         return pedidosList;
     }
 
+    public void borrarPedidos() {
+        SQLiteDatabase bd = this.getWritableDatabase();
+
+        bd.delete(SQLitePedidos.PEDIDOS, null, null);
+    }
+
     //deben crearse inicialmente estos 2 metodos  onCreate(SQLiteDatabase db), onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     @Override
     public void onCreate(SQLiteDatabase db) {

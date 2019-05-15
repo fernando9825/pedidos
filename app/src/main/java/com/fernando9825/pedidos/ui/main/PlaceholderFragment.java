@@ -19,6 +19,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.fernando9825.pedidos.MainActivity;
 import com.fernando9825.pedidos.R;
 import com.fernando9825.pedidos.SQLite.SQLitePedidos;
@@ -254,18 +259,56 @@ public class PlaceholderFragment extends Fragment {
 
     private void subirServidor(){
 
-        for (int i = 0; i < orders.size(); i++){
-            eliminarPedidos(orders.get(i).getId_pedido());
+        for (int i = 0; i <= orders.size(); i++) {
+
+
+            String url = IP_SERVER + "/pedidos";
+            String parametros =
+                    "?id_pedido=" + orders.get(i).getId_pedido() +
+                            "&cliente=" + orders.get(i).getCliente() +
+                            "&producto=" + orders.get(i).getProducto() +
+                            "&precio=" + orders.get(i).getPrecio() +
+                            "&cantidad=" + orders.get(i).getCantidad() +
+                            "&total=" + orders.get(i).getTotal() +
+                            "&fecha=" + orders.get(i).getFecha();
+
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, (url + parametros),
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                // nada
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(getContext(), "No se ha enviar ", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+            //adding our stringrequest to queue
+            Volley.newRequestQueue(getContext()).add(stringRequest);
+            eliminarPedidos();
+
         }
+
+
         Toast.makeText(getContext(), "Pedidos Subidos al Servidor :D", Toast.LENGTH_SHORT).show();
     }
 
-    private void eliminarPedidos(int subido){
+    private void eliminarPedidos(){
         SQLitePedidos admin = new SQLitePedidos(getContext(),
                 "pedidos", null, 1);
-        SQLiteDatabase db = admin.getWritableDatabase(); //Crea o abre una base  de datos util para lectura y escritura.
-        db.delete("pedidos", "id_pedido = " + subido, null);
-        db.close();
+        admin.borrarPedidos();
+        MainActivity.pedidos.clear();
+        orders.clear();
+        List<Pedidos> noPedidos = new ArrayList<>();
+        noPedidos.add(new Pedidos("Aún sin pedidos, presione el botón para crear uno nuevo"));
+        recyclerView.setAdapter(new PedidosAdapter(getContext(), noPedidos));
     }
 
     private void loadPedidosToRecycler() {
